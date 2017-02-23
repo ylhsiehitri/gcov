@@ -1,7 +1,7 @@
 # gcov
 gcov tutorial and simple
 ## gcov for usersapce C program
-1. Add -ftest-coverage -fprofile-arcs when compiling codes  
+1. Add -ftest-coverage -fprofile-arcs when compiling codes 
 `
 gcc -ftest-coverage -fprofile-arcs main.c -o main  
 `
@@ -19,6 +19,8 @@ genhtml main.info -o main_result
 ##gcov for kernel modles
 ###Require gcov enabled linux kernel
 http://techvolve.blogspot.tw/2014/03/how-to-gcovlcov-for-linux-kernel-modules.html   
+
+
 here we use hello.c and Makefile as example  
 1. Edit your Makefile as src/Makefile shows.  
 	Add following
