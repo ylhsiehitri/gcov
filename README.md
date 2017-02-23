@@ -17,6 +17,8 @@ lcov -c -o main.info -d .
 genhtml main.info -o main_result
 ```
 ##gcov for kernel modles
+###Require gcov enabled linux kernel
+http://techvolve.blogspot.tw/2014/03/how-to-gcovlcov-for-linux-kernel-modules.html
 here we use hello.c and Makefile as example  
 1. Edit your Makefile as src/Makefile shows.  
 	Add following
