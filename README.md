@@ -23,7 +23,7 @@ http://techvolve.blogspot.tw/2014/03/how-to-gcovlcov-for-linux-kernel-modules.ht
 
 here we use hello.c and Makefile as example  
 ### 1. Edit your Makefile as src/Makefile shows.  
-	Add following
+Add following
  ```
 GCOV_PROFILE := y  
 CFLAGS=-ftest-coverage -fprofile-arcs  
