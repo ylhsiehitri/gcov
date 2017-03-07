@@ -22,28 +22,31 @@ http://techvolve.blogspot.tw/2014/03/how-to-gcovlcov-for-linux-kernel-modules.ht
 
 
 here we use hello.c and Makefile as example  
-1. Edit your Makefile as src/Makefile shows.  
+### 1. Edit your Makefile as src/Makefile shows.  
 	Add following
-``` 
-GCOV_PROFILE := y
-CFLAGS=-ftest-coverage -fprofile-arcs
-export CFLAGS
+ ```
+GCOV_PROFILE := y  
+CFLAGS=-ftest-coverage -fprofile-arcs  
+export CFLAGS  
 ```
-
-2. Make  
+### 2. Make  
 	Use make command to compile driver.  
-3. Install driver and run your test program maybe.  
-  insmod
-4. The gcov file will be in  
+### 3. Install driver and run your test program maybe.  
+  insmod    
+### 4. The gcov file will be in  
 `
 /sys/kernel/debug/gcov/<your dir>/program.gcda nad program.gcno
 `
-5. Copy .gcda and .gcno to your project dir.  
-6. Run gcov  
+### 5. Copy .gcda and .gcno to your project dir.  
+  or use the fetch_n_merge_gcov script  
+`
+sudo ./fetch_n_merge_gcov --local --kinfo
+`
+### 6. Run gcov  
 `
 gcov hello.c
 `
-7. Outout html report py lcov and genhtml  
+### 7. Outout html report py lcov and genhtml  
 ```
 lcov -c -o hello.info -d .  
 genhtml hello.info -o main_result
