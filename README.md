@@ -11,7 +11,7 @@ gcc -ftest-coverage -fprofile-arcs main.c -o main
 gcov main.c  
 `
 
-3. Outout html report py lcov and genhtml  
+3. Outout html report by lcov and genhtml  
 ```
 lcov -c -o main.info -d .  
 genhtml main.info -o main_result
@@ -35,7 +35,7 @@ export CFLAGS
   insmod    
 ### 4. The gcov file will be in  
 `
-/sys/kernel/debug/gcov/<your dir>/program.gcda nad program.gcno
+/sys/kernel/debug/gcov/<your dir>/program.gcda and program.gcno
 `
 ### 5. Copy .gcda and .gcno to your project dir.  
   or use the fetch_n_merge_gcov script  
@@ -46,7 +46,7 @@ sudo ./fetch_n_merge_gcov --local --kinfo
 `
 gcov hello.c
 `
-### 7. Outout html report py lcov and genhtml  
+### 7. Outout html report by lcov and genhtml  
 ```
 lcov -c -o hello.info -d .  
 genhtml hello.info -o main_result
