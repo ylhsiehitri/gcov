@@ -16,8 +16,9 @@ gcov main.c
 lcov -c -o main.info -d .  
 genhtml main.info -o main_result
 ```
-##gcov for kernel modles
-###Require gcov enabled linux kernel
+
+## gcov for kernel modles
+### Require gcov enabled linux kernel
 http://techvolve.blogspot.tw/2014/03/how-to-gcovlcov-for-linux-kernel-modules.html   
 
 
