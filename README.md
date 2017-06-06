@@ -41,14 +41,25 @@ export CFLAGS
 ### 5. Copy .gcda and .gcno to your project dir.  
   or use the fetch_n_merge_gcov script  
 `
-sudo ./fetch_n_merge_gcov --local --kinfo
+sudo ./fetch_n_merge_gcov --local --kinfo  
 `
 ### 6. Run gcov  
 `
-gcov hello.c
+gcov hello.c  
 `
 ### 7. Outout html report by lcov and genhtml  
-```
+`
 lcov -c -o hello.info -d .  
+`  
+#### To remove unnecessary file (file name or path with "include" will be removed)  
+`
+lcov -r hell.info "include*" -o hello.info2  
+`  
+#### To extract certain file (file name or path with ".c" will be extracted)  
+`
+lcov -e hello.info "*.c"  -o hello.info3  
+`  
+#### Generate html report  
+`
 genhtml hello.info -o main_result
-```
+`
